@@ -1,11 +1,19 @@
----
-layout: default
----
+{% include header.html %}
 
-<div class="post">
+<header class="header">
+	<div class="container">
+		<nav class="nav">
+			<a href="{{site.baseurl}}/">home</a>
+			<a href="{{site.baseurl}}/archiv">archive</a>
+		</nav>
+	</div>
+</header>
 
-    <h2>{{ page.title }}</h2>
+<main class="main">
+	<div class="container">
+		<h2>{{ page.title }}</h2>
+		{{content}}
+	</div>
+</main>
 
-	<div class="entry">{{ content }}</div>
-
-</div>
+{% include footer.html %}

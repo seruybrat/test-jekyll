@@ -43,4 +43,5 @@ exclude:
   - vendor/ruby/
   - gulpfile.js
   - package.json
+  - src/
   

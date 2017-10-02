@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="ru">
+{% include header.html %}
 
-	{% include header.html %}
+<header class="header">
+	<div class="container">
+		<nav class="nav">
+			<a href="{{site.baseurl}}/">home</a>
+			<a href="{{site.baseurl}}/archiv.html">archive</a>
+		</nav>
+	</div>
+</header>
 
-	<body>
-		<div class="page-container">
-			<div class="wrap">
-			<ul>
-                <li><a href="{{site.baseurl}}/">Home</a></li>
-                <li><a href="{{site.baseurl}}/archiv">Archiv</a></li>
-            </ul>
-			</div>
-		</div>
-		{{content}}
+<main class="main home">
+	<div class="container">
+		
+	</div>
+</main>
 
-		{% include footer.html %}
+{% include footer.html %}
 
-	</body>
-</html>
