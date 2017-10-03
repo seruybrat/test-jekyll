@@ -1,2 +1,163 @@
 @import "fonts";
 @import "vars";
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: $font-color;
+	background-color: #fff;
+	margin: 0;
+	padding-top: 40px;
+}
+
+.clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.link {
+	color: $font-color;
+	text-decoration: none;
+}
+
+.title {
+	margin: 0 0 1em;
+	font-weight: 600;
+    color: #2c3e50;
+}
+
+.btn {
+	display: inline-block;
+	margin: 0 6px;
+	padding: 11px 24px;
+	font-size: 0.875em;
+	font-weight: 500;
+	color: $main-color;
+	text-transform: uppercase;
+	border-radius: 3px;
+	background-color: #fff;
+	border: 1px solid $main-color;
+	transition: all .3s ease;
+
+	&:hover {
+		border-color: $accent-color;
+	}
+}
+
+.header {
+	@extend .clearfix;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	box-shadow: 0 0 1px rgba(0,0,0,0.25);
+	height: 40px;
+    padding: 10px 60px;
+    z-index: 5;
+    box-sizing: border-box;
+
+    &__logo {
+    	float: left;
+
+    	.link {
+    		font-family: Arial, sans-serif;
+    		display: block;
+    		font-weight: bold;
+    		font-size: 20px;
+    		transition: color .6s ease;
+
+    		&:hover {
+    			color: $accent-color;
+    		}
+    	}
+    }
+
+    &__nav {
+    	float: right;
+    }
+}
+
+.main {
+	display: block;
+	padding: 2.2em 60px;
+}
+
+.form {
+	position: relative;
+	max-width: 600px;
+	margin: 0 auto;
+
+	&__field {
+		position: relative;
+		margin-bottom: 10px; 
+		padding-top: 20px;
+	}
+
+	&__lbl {
+		display: block;
+		position: absolute;
+		top: 15px;
+		left: 0;
+		color: #989898;
+		transition: all .3s ease;
+
+		&.active {
+			top: 0;
+			font-size: .8em;
+			color: rgba(47, 42, 42, 0.87);
+
+			+ input {
+				border-color: $accent-color;
+			}
+		}
+	}
+
+	&__input {
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid $main-color;
+		border-radius: 5px;
+		font-size: 1em;
+
+		&:focus {
+			outline: none;
+			border-color: #5cb3fd;
+		}
+
+
+	}
+
+	&__submit {
+		cursor: pointer;
+		line-height: normal;
+	}
+
+	&__btn {
+		text-align: center;
+		padding-top: 15px;
+	}
+
+}
+
+#form-succes {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255,255,255,.8);
+	text-align: center;
+
+	.succes-message {
+		padding-top: 50px;
+		color: $accent-color;
+		font-size: 1.2em;
+	}
+}

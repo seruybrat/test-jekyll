@@ -27,17 +27,25 @@ gulp.task('css', function() {
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
-gulp.task('js', function() {
+gulp.task('common-js', function() {
   return gulp.src('src/js/scripts.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
-    .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('js'))
-    .pipe(rename({suffix: '.min'}))
+    .pipe(concat('scripts.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js'))
-    .pipe(gulp.dest('_site/js'))
     .pipe(notify({ message: 'Scripts task complete' }));
+});
+
+gulp.task('js', ['common-js'], function() {
+    return gulp.src([
+        'src/js/vendors/jquery-3.2.1.min.js',
+        'js/scripts.min.js',
+        ])
+    .pipe(concat('common.min.js'))
+    .pipe(gulp.dest('js'))
+    .pipe(gulp.dest('_site/js'))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('clean', function() {
@@ -96,7 +104,7 @@ gulp.task('watch', function() {
   // Watch .js files
   gulp.watch('src/js/**/*.js', ['js']);
   // Watch .html files and posts
-  gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'], ['jekyll-rebuild']);
+  gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'], ['jekyll-rebuild']);
 });
 
 gulp.task('default', ['clean'], function() {
