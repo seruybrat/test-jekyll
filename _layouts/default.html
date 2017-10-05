@@ -9,6 +9,44 @@
 	 {{ post }}
 	{% endfor %}
 
+	<div class="container">
+<!-- 		<h2 class="title title_2">Коментарі</h2>
+		<div class="comments">
+			<ul class="comments__list">
+				<li class="comments__item">
+					<span class="comments__name">Сергій Іваненко</span>
+				</li>
+				<li class="comments__item">
+					<span class="comments__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, est sint veritatis minima, odio quos dolorem ipsam facilis repellendus harum nesciunt reprehenderit debitis perferendis. Voluptatem perferendis consequatur quod culpa neque.</span>
+				</li>
+			</ul>
+		</div> -->
+	
+		<form class="form" method="POST" action="mail.php">
+			<input type="hidden" name="project_name" value="Zhatva">
+			<input type="hidden" name="admin_email" value="sergiibartkiv@gmail.com">
+			<input type="hidden" name="form_subject" value="Comments">
+
+			<div class="form__field">
+				<label class="form__lbl" for="inp-name"> Ваше ім'я </label>
+				<input id="inp-name" class="form__input" name="name" type="text" />
+			</div>
+
+			<div class="form__field">
+				<label class="form__lbl" for="message"> Ваше коментар* </label>
+				<input id="message" class="form__input" name="message" type="text" required>
+			</div>
+
+			<div class="form__btn">
+				<button class="btn btn_accent form__submit" />Відправити</button>
+			</div>
+
+			<div id="form-succes">
+				<div class="succes-message">Дякую, коментар незабаром появиться</div>
+			</div>
+		</form>
+	</div>
+
 </main>
 
 {% include footer.html %}

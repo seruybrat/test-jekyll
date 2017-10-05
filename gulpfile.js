@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
+    imagemin = require('gulp-imagemin'),
     minifycss = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
@@ -48,8 +49,14 @@ gulp.task('js', ['common-js'], function() {
     .pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('imagemin', function() {
+    return gulp.src('src/img/**/*')
+    .pipe(cache(imagemin()))
+    .pipe(gulp.dest('img')); 
+});
+
 gulp.task('clean', function() {
-  return gulp.src(['css', 'js'], {read: false})
+  return gulp.src(['css', 'js', 'imagemin'], {read: false})
     .pipe(clean());
 });
 
@@ -108,5 +115,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['clean'], function() {
-    gulp.start('css', 'js', 'browser-sync', 'watch');
+    gulp.start('css', 'js', 'imagemin', 'browser-sync', 'watch');
 });

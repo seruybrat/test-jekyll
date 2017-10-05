@@ -10,28 +10,27 @@ $( document ).ready(function() {
     });
 
     $("form").submit(function(e) {
+
+        e.preventDefault();
+
         var th = $(this);
-        var mail = $('#inp-mail');
 
-        if (mail.val().length > 5) {
-	        $.ajax({
-	            type: "POST",
-	            url: "mail.php",
-	            data: th.serialize()
+        $.ajax({
+            type: th.attr('method'),
+            url: th.attr('action'),
+            data: th.serialize()
 
-	        }).done(function() {
+        }).done(function() {
 
-	            $('#form-succes').fadeIn();
+            $('#form-succes').fadeIn();
 
-	            setTimeout(function() {
-	                th.trigger("reset");
-	                $('#form-succes').fadeOut();
-	                $('.form__lbl').removeClass('active');
-	            }, 3000);
-	        });
-        }
+            setTimeout(function() {
+                th.trigger("reset");
+                $('#form-succes').fadeOut();
+                $('.form__lbl').removeClass('active');
+            }, 5000);
+        });
 
-        return false;
     });
 
     $('.hamburger').click(function () {

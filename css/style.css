@@ -8,6 +8,7 @@ body {
   position: relative;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 15px;
+  color: #34495e;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #34495e;
@@ -37,7 +38,7 @@ body.open .sidebar {
   display: block;
 }
 
-.clearfix:after, .header:after {
+.clearfix:after, .header:after, .figure:after {
   content: '';
   display: table;
   clear: both;
@@ -57,6 +58,9 @@ body.open .sidebar {
   margin: 0 0 1em;
   font-weight: 600;
   color: #2c3e50;
+}
+.title_2 {
+  font-size: 1.4em;
 }
 
 .btn {
@@ -274,6 +278,49 @@ body.open .sidebar {
 }
 .sidebar .link:hover {
   color: #5999e5;
+}
+
+.figure {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.figure__img {
+  display: inline-block;
+  float: left;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+.figure:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: inset 0px 0px 15px 12px white;
+          box-shadow: inset 0px 0px 15px 12px white;
+}
+.figure + .figure {
+  margin: 10px 0;
+}
+
+.comments {
+  border-top: 1px solid #34495e;
+}
+.comments__list {
+  list-style-type: none;
+}
+.comments__name {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.comments__txt {
+  font-size: .9em;
 }
 
 @media only screen and (max-width: 600px) {

@@ -10,6 +10,7 @@ body {
 	position: relative;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 15px;
+	color: $font-color;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: $font-color;
@@ -68,6 +69,10 @@ body {
 	margin: 0 0 1em;
 	font-weight: 600;
     color: #2c3e50;
+
+    &_2 {
+    	font-size: 1.4em;
+    }
 }
 
 .btn {
@@ -300,6 +305,55 @@ body {
 		&:hover {
 			color: $main-color;
 		}
+	}
+}
+
+.figure {
+	@extend .clearfix;
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+
+	&__img {
+		display: inline-block;
+		float: left;
+		border-radius: 5px;
+		width: 100%;
+		height: auto;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		box-shadow: inset 0px 0px 15px 12px rgba(255,255,255,1);
+	}
+
+	& + .figure {
+		margin: 10px 0;
+	}
+}
+
+.comments {
+	border-top: 1px solid $font-color;
+
+	&__list {
+		list-style-type: none;
+	}
+
+	&__name {
+		font-weight: bold;
+		font-size: 1.1em;
+	}
+
+	&__txt {
+		font-size: .9em;
 	}
 }
 
