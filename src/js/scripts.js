@@ -33,4 +33,8 @@ $( document ).ready(function() {
 
         return false;
     });
+
+    $('.hamburger').click(function () {
+        $('body').toggleClass('open');
+    });
 });

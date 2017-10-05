@@ -4,29 +4,31 @@ title: Contacts
 ---
 
 <section class="contacts">
-	<h1 class="title"></h1>
+	<div class="container">
+		<h1 class="title"></h1>
 
-	<form class="form">
-		<input type="hidden" name="project_name" value="Zhatva">
-		<input type="hidden" name="admin_email" value="sergiibartkiv@gmail.com">
-		<input type="hidden" name="form_subject" value="contacts">
+		<form class="form">
+			<input type="hidden" name="project_name" value="Zhatva">
+			<input type="hidden" name="admin_email" value="sergiibartkiv@gmail.com">
+			<input type="hidden" name="form_subject" value="contacts">
 
-		<div class="form__field">
-			<label class="form__lbl" for="inp-mail"> Електронна пошта* </label>
-			<input id="inp-mail" class="form__input" name="email" required="" type="email" />
-		</div>
+			<div class="form__field">
+				<label class="form__lbl" for="inp-mail"> Електронна пошта* </label>
+				<input id="inp-mail" class="form__input" name="email" required="" type="email" />
+			</div>
 
-		<div class="form__field">
-			<label class="form__lbl" for="message"> Ваше повідомлення </label>
-			<input id="message" class="form__input" name="message" type="text">
-		</div>
+			<div class="form__field">
+				<label class="form__lbl" for="message"> Ваше повідомлення </label>
+				<input id="message" class="form__input" name="message" type="text">
+			</div>
 
-		<div class="form__btn">
-			<button class="btn btn_accent form__submit" />Відправити</button>
-		</div>
+			<div class="form__btn">
+				<button class="btn btn_accent form__submit" />Відправити</button>
+			</div>
 
-		<div id="form-succes">
-			<div class="succes-message">Дякую за звернення!</div>
-		</div>
-	</form>
+			<div id="form-succes">
+				<div class="succes-message">Дякую за звернення!</div>
+			</div>
+		</form>
+	</div>
 </section>
