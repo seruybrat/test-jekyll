@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 100%;
 }
 
 body {
@@ -90,6 +91,7 @@ body.open .sidebar {
   background-color: #5999e5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline-style: none;
 }
 .logo__link:hover {
   background-color: #42b983;
@@ -138,6 +140,64 @@ body.open .sidebar {
   padding: 2.2em 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+#canvas {
+  display: block;
+  margin: 50px auto 10px;
+}
+
+.consist {
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+}
+.consist__link {
+  display: inline-block;
+  position: relative;
+  color: #5999e5;
+}
+.consist__link:hover {
+  color: #42b983;
+}
+.consist__link:after {
+  content: '................................................................................................................................................................................................................................................';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 105%;
+  z-index: 1;
+}
+.consist__item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.consist__item:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 5px;
+  background-color: #fff;
+  z-index: 2;
+}
+.consist__item:nth-child(1):before {
+  content: '1';
+}
+.consist__item:nth-child(2):before {
+  content: '2';
+}
+.consist__item:nth-child(3):before {
+  content: '3';
+}
+.consist__item:nth-child(4):before {
+  content: '4';
+}
+
+.board .title {
+  text-align: center;
 }
 
 .form {
@@ -318,6 +378,9 @@ body.open .sidebar {
 .comments__name {
   font-weight: bold;
   font-size: 1.1em;
+}
+.comments__name_admin {
+  color: #42b983;
 }
 .comments__txt {
   font-size: .9em;

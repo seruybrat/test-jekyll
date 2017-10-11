@@ -1,15 +1,15 @@
 ---
 layout: post
 date:   2017-10-03 13:38:51 +0300
-title:   Я - клітина в організмі
-comment-title: Cell
+title:   Катаклізм
+comment-title: cataclysm
 og-img-src: img/1.jpg
-desc: Ви знали, що в тілі людини знаходиться близько ста трильйонів клітин? Клітина має дихальну систему, розмножується, вмирає, народжується, живиться, думає і взаємодіє з собі подібними.
+desc: Катаклізм
 ---
 
 <article class="article">
 	<div class="container">
-		<h1 class="title">Я - клітина в організмі</h1>
+		<h1 class="title"> Катаклізм</h1>
 		
 		<figure class="figure">
 			<img src="{{site.baseurl}}/img/1.jpg" class="figure__img" alt="Клітина">
@@ -148,28 +148,6 @@ desc: Ви знали, що в тілі людини знаходиться бл
 			продовжуєм дотримуватись цих насаджених обрядів. Стадо баранів рубає, корчує, рве, осушує наші справжні Храми, 
 			і вірить у життя в едемі христа...
 		</p>
-	</div>
-
-	<div class="container">
-		<h2 class="title title_2">Коментарі</h2>
-		<div class="comments">
-			<ul class="comments__list">
-				<li class="comments__item">
-					<span class="comments__name">Юр</span>
-				</li>
-				<li class="comments__item">
-					<span class="comments__txt">Не до конца оказалось ясной мысль о "потеряли свою божественность", типа что ты имеешь ввиду и почему божественность и почему потеряли? Божественность это то что есть у животных живущих в гармонии и не знающих богов? Или божественность это некая метафизика? Ну и типа от этого зависит переход к религии, и если ты имел ввиду 1 вариант надо как-то там ещё разбавить мне кажется</span>
-				</li>
-				<ul class="comments__list">
-					<li class="comments__item">
-						<span class="comments__name comments__name_admin">Адмін</span>
-					</li>
-					<li class="comments__item">
-						<span class="comments__txt">Божественність це усвідомлення, що ми є частиною свідомого організму. Тобто свідомий організм і є Бог</span>
-					</li>
-				</ul>
-			</ul>
-		</div>
 	</div>
 
 </article>

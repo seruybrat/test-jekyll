@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+
+
     $('.form__input').on('focus', function() {
         $(this).siblings('.form__lbl').addClass('active');
     });
@@ -36,4 +38,6 @@ $( document ).ready(function() {
     $('.hamburger').click(function () {
         $('body').toggleClass('open');
     });
+
+
 });
